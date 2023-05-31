@@ -34,12 +34,12 @@ public class SearchActivity extends AppCompatActivity {
         Recipes.add("Ice Cream");
         Recipes.add("Chipped Beef");
         Recipes.add("Brownies");
-        Recipes.add("Fr");
+
 
     }
 
 
-    //this is what gives us the search bar
+    //this is what gives us the search bar, could possibly use this to simply UI and instead turn floater buttons into a menu element. (I do like the Fab aesthetic though)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
