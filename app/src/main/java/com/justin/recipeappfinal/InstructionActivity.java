@@ -83,14 +83,12 @@ public class InstructionActivity extends AppCompatActivity {
             showRecipe(mCurrentQuestionIndex - 1);
             return true;
         }
+        //use an else if to finish the statement even if its the last
         else if (item.getItemId() == R.id.next) {
             showRecipe(mCurrentQuestionIndex + 1);
             return true;
         }
-        else if (item.getItemId() == R.id.Favoriter) {
-            addToFavorites();
-            return true;
-        }
+
 
 
         return super.onOptionsItemSelected(item);

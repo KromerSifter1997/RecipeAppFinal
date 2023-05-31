@@ -17,9 +17,6 @@
         android:title="@string/next"
         app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/Favoriter"
-        android:title="@string/favorite"
-        app:showAsAction="never"/>
 
 
 </menu>

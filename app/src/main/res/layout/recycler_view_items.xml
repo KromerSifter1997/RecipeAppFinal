@@ -9,7 +9,7 @@
     <!--PUT ANYTHING YOU WANT INSIDE EACH CARD IN HERE-->
 
     <TextView
-        android:id="@+id/subject_text_view"
+        android:id="@+id/recipe_text_view"
         style="@style/CardLabel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

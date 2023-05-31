@@ -125,17 +125,17 @@ public class RecipeActivity extends AppCompatActivity
 
     }
 
-    private class SubjectHolder extends RecyclerView.ViewHolder
+    private class RecipeHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
 
 
         private Food mFood;
         private final TextView mSubjectTextView;
 
-        public SubjectHolder(LayoutInflater inflater, ViewGroup parent) {
+        public RecipeHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.recycler_view_items, parent, false));
             itemView.setOnClickListener(this);
-            mSubjectTextView = itemView.findViewById(R.id.subject_text_view);
+            mSubjectTextView = itemView.findViewById(R.id.recipe_text_view);
         }
 
 
@@ -151,7 +151,7 @@ public class RecipeActivity extends AppCompatActivity
 
         @Override
         public void onClick(View view) {
-            // Start QuestionActivity with the selected subject
+            // Start InstructionActivity with the selected subject
             Intent intent = new Intent(RecipeActivity.this, InstructionActivity.class);
             intent.putExtra(InstructionActivity.EXTRA_SUBJECT_ID, mFood.getId());
             intent.putExtra(InstructionActivity.EXTRA_SUBJECT_TEXT, mFood.getText());
@@ -160,7 +160,8 @@ public class RecipeActivity extends AppCompatActivity
         }
     }
 
-    private class RecipeAdapter extends RecyclerView.Adapter<SubjectHolder> {
+    //sets the layout for the cards
+    private class RecipeAdapter extends RecyclerView.Adapter<RecipeHolder> {
 
         private final List<Food> mFoodList;
 
@@ -170,13 +171,13 @@ public class RecipeActivity extends AppCompatActivity
 
         @NonNull
         @Override
-        public SubjectHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public RecipeHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(getApplicationContext());
-            return new SubjectHolder(layoutInflater, parent);
+            return new RecipeHolder(layoutInflater, parent);
         }
 
         @Override
-        public void onBindViewHolder(SubjectHolder holder, int position) {
+        public void onBindViewHolder(RecipeHolder holder, int position) {
             holder.bind(mFoodList.get(position), position);
         }
 
@@ -185,6 +186,8 @@ public class RecipeActivity extends AppCompatActivity
             return mFoodList.size();
         }
     }
+
+
 
 }
 

@@ -7,7 +7,7 @@
     <string name="previous">Previous</string>
     <string name="next">Next</string>
     <string name="favorite">☆</string>
-    <string name="cancel">Cancel</string>
+    <string name="SearchFail">Unforunately,there was no food to be found</string>
     <string name="favoriteRecipes">Open Favorite</string>
     <string name="stepNumber">(Step %2$d of %3$d)</string>
     <string name="cardfavoritebutton">Favoriter button</string>

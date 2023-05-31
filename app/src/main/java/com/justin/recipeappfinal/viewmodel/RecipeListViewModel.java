@@ -15,7 +15,7 @@ public class RecipeListViewModel {
     }
 
     public List<Food> getRecipes() {
-        return recipeRepo.getSubjects();
+        return recipeRepo.getInstructions();
     }
 
 }

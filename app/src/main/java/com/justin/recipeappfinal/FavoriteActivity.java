@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,13 +25,8 @@ import java.util.List;
 public class FavoriteActivity extends AppCompatActivity {
 
 
-    private FavoriteActivity.RecipeAdapter mRecipeAdapter;
     private RecyclerView mRecyclerView;
     private int[] mSubjectColors;
-
-
-    private FavoriteListViewModel mFavoriteListViewModel;
-
 
 
     @Override
@@ -41,20 +35,19 @@ public class FavoriteActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recipe);
+        //reminder, make sure this says the correct layout else it duplicates the layout specified (might be useful in the future...)
+        setContentView(R.layout.activity_favorite);
 
 
-
-        mFavoriteListViewModel = new FavoriteListViewModel(getApplication());
+        FavoriteListViewModel mFavoriteListViewModel = new FavoriteListViewModel(getApplication());
 
         mSubjectColors = getResources().getIntArray(R.array.subjectColors);
 
 //        findViewById(R.id.add_subject_button).setOnClickListener(view -> addSubjectClick());
 
         // Create 2 grid layout columns
-        mRecyclerView = findViewById(R.id.recipe_recycler_view);
-        RecyclerView.LayoutManager gridLayoutManager =
-                new GridLayoutManager(getApplicationContext(), 2);
+        mRecyclerView = findViewById(R.id.Favorite_recycler_view);
+        RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
         mRecyclerView.setLayoutManager(gridLayoutManager);
 
 
@@ -71,8 +64,8 @@ public class FavoriteActivity extends AppCompatActivity {
 
 
     public void updateUI(List<Favorites> favoritesList) {
-        mRecipeAdapter = new FavoriteActivity.RecipeAdapter(favoritesList);
-        mRecyclerView.setAdapter(mRecipeAdapter);
+        FavoriteAdapter mFavAdapter = new FavoriteAdapter(favoritesList);
+        mRecyclerView.setAdapter(mFavAdapter);
 
     }
 
@@ -80,45 +73,45 @@ public class FavoriteActivity extends AppCompatActivity {
 
 
 
-    private void addFavorite() {
-//        SubjectDialogFragment dialog = new SubjectDialogFragment();
-//        dialog.show(getSupportFragmentManager(), "subjectDialog");
-    }
+//    private void addFavorite() {
+////        SubjectDialogFragment dialog = new SubjectDialogFragment();
+////        dialog.show(getSupportFragmentManager(), "subjectDialog");
+//    }
 
-    private void openFavorite() {
-        Button btn = (Button)findViewById(R.id.openFavoritesButton);
+//    private void openFavorite() {
+//        Button btn = (Button)findViewById(R.id.openFavoritesButton);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(FavoriteActivity.this, FavoriteActivity.class));
+//            }
+//        });
+//
+//    }
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(FavoriteActivity.this, FavoriteActivity.class));
-            }
-        });
-
-    }
-
-    private class SubjectHolder extends RecyclerView.ViewHolder
+    private class FavoritesHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
 
 
         private Favorites mFavorites;
-        private final TextView mSubjectTextView;
+        private final TextView mFavoriteTextView;
 
-        public SubjectHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.recycler_view_items, parent, false));
+        public FavoritesHolder(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater.inflate(R.layout.favorite_view_items, parent, false));
             itemView.setOnClickListener(this);
-            mSubjectTextView = itemView.findViewById(R.id.subject_text_view);
+            mFavoriteTextView = itemView.findViewById(R.id.favorite_text_view);
         }
 
 
 
         public void bindFav(Favorites favorites, int position) {
             mFavorites = favorites;
-            mSubjectTextView.setText(favorites.getText());
+            mFavoriteTextView.setText(favorites.getText());
 
             // Make the background color dependent on the length of the subject string
             int colorIndex = favorites.getText().length() % mSubjectColors.length;
-            mSubjectTextView.setBackgroundColor(mSubjectColors[colorIndex]);
+            mFavoriteTextView.setBackgroundColor(mSubjectColors[colorIndex]);
         }
 
         @Override
@@ -132,23 +125,24 @@ public class FavoriteActivity extends AppCompatActivity {
         }
     }
 
-    private class RecipeAdapter extends RecyclerView.Adapter<FavoriteActivity.SubjectHolder> {
+    //takes advantage of the same card setup the recipe activity uses but uses the favorites layout.
+    private class FavoriteAdapter extends RecyclerView.Adapter<FavoritesHolder> {
 
         private final List<Favorites> mFavoriteList;
 
-        public RecipeAdapter(List<Favorites> foods) {
+        public FavoriteAdapter(List<Favorites> foods) {
             mFavoriteList = foods;
         }
 
         @NonNull
         @Override
-        public FavoriteActivity.SubjectHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public FavoritesHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             LayoutInflater layoutInflater = LayoutInflater.from(getApplicationContext());
-            return new FavoriteActivity.SubjectHolder(layoutInflater, parent);
+            return new FavoritesHolder(layoutInflater, parent);
         }
 
         @Override
-        public void onBindViewHolder(FavoriteActivity.SubjectHolder holder, int position) {
+        public void onBindViewHolder(FavoritesHolder holder, int position) {
             holder.bindFav(mFavoriteList.get(position), position);
         }
 
