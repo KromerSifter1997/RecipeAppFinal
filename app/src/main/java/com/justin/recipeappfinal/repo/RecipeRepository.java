@@ -40,16 +40,10 @@ public class RecipeRepository extends AppCompatActivity {
         //this saves the current state of the toggle as a true or false
         ToggleButton simpleToggleButton = (ToggleButton) findViewById(R.id.toggleButton); // initiate a toggle button
 
-        ToggleButton btn = (ToggleButton) findViewById(R.id.toggleButton);
+
         toggleButtonState = simpleToggleButton.isChecked();
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                addStarterData();
 
-            }
-        });
         ///////////////////////////////////////////////////////////////
 
 //        simpleToggleButton.setOnClickListener(new View.OnClickListener() {
@@ -102,8 +96,10 @@ public class RecipeRepository extends AppCompatActivity {
         Food food = new Food("SPAGHETTI");
         food.setId(1);
 
-        //ok heres the main issue, basically the favorites function works. But i cannot get a toggle button click listener or statecheck on toggle to work to save my life.
-        //if you change this variable to true, the item will appear in favorites, which is
+        //ok heres the main issue, basically the favorites function works.
+        //But i cannot get a toggle button click listener or compound button.ischecked to work.
+        //This means I can't really save the toggle button's state since that would be the easiest way to make favorites save.
+        //if you change this variable to true, the item will appear in favorites, which means
         // technically the favorites system is functional. Rather being able to favorite an item doesn't work.
         if(toggleButtonState = false) {
 
@@ -686,7 +682,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(14);
         addStep(recipe);
 
 
