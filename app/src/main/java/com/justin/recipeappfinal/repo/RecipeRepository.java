@@ -102,8 +102,6 @@ public class RecipeRepository extends AppCompatActivity {
         Food food = new Food("SPAGHETTI");
         food.setId(1);
 
-
-
         //ok heres the main issue, basically the favorites function works. But i cannot get a toggle button click listener or statecheck on toggle to work to save my life.
         //if you change this variable to true, the item will appear in favorites, which is
         // technically the favorites system is functional. Rather being able to favorite an item doesn't work.
@@ -114,7 +112,6 @@ public class RecipeRepository extends AppCompatActivity {
             addFavorites(favorites);
 
         }
-
 
         addRecipe(food);
 
@@ -137,7 +134,7 @@ public class RecipeRepository extends AppCompatActivity {
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Serving");
         recipe.setIngredients("Quarter Oz tomato sauce\n\nHalf pound spaghetti\n\nSalt & pepper (if desired)");
         recipe.setInstructions("Place pasta into bowl or place\n\nPour sauce over pasta\n\nAdd salt and pepper if desired");
@@ -153,13 +150,13 @@ public class RecipeRepository extends AppCompatActivity {
         //after just do subject = new subject()
 
         food = new Food("COOKIES");
-        food.setId(1);
+        food.setId(2);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("COOKIES");
-            favorites.setFavId(1);
+            favorites.setFavId(2);
             addFavorites(favorites);
 
         }
@@ -171,7 +168,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Sauce");
         recipe.setIngredients("Cookie Dough");
         recipe.setInstructions("Bake Cookiedough at 350F degrees in oven for 10 minutes");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(2);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -179,7 +176,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Serving");
         recipe.setIngredients("Cookies");
         recipe.setInstructions("Consume Cookies!");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(2);
         addStep(recipe);
 
 
@@ -187,13 +184,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("PANCAKES");
-        food.setId(1);
+        food.setId(3);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("PANCAKES");
-            favorites.setFavId(1);
+            favorites.setFavId(3);
             addFavorites(favorites);
 
         }
@@ -207,7 +204,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("batter");
         recipe.setIngredients("Flour & Sugar \n\n Milk & Butter \n\n 2 Eggs");
         recipe.setInstructions("Mix batter until it has the consistancy of sludge \n\n Pour onto pan or some heated cooking implement \n\n regularly flip until both sides are golden brown \n\n remove from pan and or heat ");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(3);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -215,23 +212,23 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Serving");
         recipe.setIngredients("Pancakes\n\nSyrup & Butter (if desired)");
         recipe.setInstructions("Place pancakes onto plate\n\nuse syrup or butter if desired\n\nEnjoy");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(3);
         addStep(recipe);
 
 
-// ///////////////////////////////////////////////////////////////
+ ///////////////////////////////////////////////////////////////
 
 
         //        Steps for Mac & Cheese
         // Mac and Cheese is a yellow color, perfect.
         food = new Food("Mac & Cheese");
-        food.setId(1);
+        food.setId(4);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Mac & Cheese");
-            favorites.setFavId(1);
+            favorites.setFavId(4);
             addFavorites(favorites);
 
         }
@@ -245,7 +242,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Roux");
         recipe.setIngredients("1/2 lb Shredded Cheddar cheese \n\n 2 Tbs of Butter \n\n 1 cup of milk");
         recipe.setInstructions("put cheese and butter into pot \"X\" allow both to cook at low temperature \n\n Mix together until congealed into mass \n\n quickly insert milk and increase heat \n\n Once all mixes into sauce, remove from heat");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(4);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -253,15 +250,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Pasta");
         recipe.setIngredients("2 cups of water\n\nSalt\n\n1/2 - 1 pound dry elbow pasta");
         recipe.setInstructions("pour 2 cups of water into large pot\n\n Throw a pinch of salt into water\n\n Heat water until boil\n\n Place pasta into water, boil for 4 minutes or until Al Dente \n\n Strain, and return to pot");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(4);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Serving");
         recipe.setIngredients("Quarter Oz tomato sauce\n\nHalf pound spaghetti\n\nSalt & pepper (if desired)");
         recipe.setInstructions("Pour Roux over pasta\n\nImmediately serve\n\nEnjoy");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(4);
         addStep(recipe);
 
 
@@ -269,13 +266,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Toast");
-        food.setId(1);
+        food.setId(5);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Toast");
-            favorites.setFavId(1);
+            favorites.setFavId(5);
             addFavorites(favorites);
 
         }
@@ -289,7 +286,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Toast");
         recipe.setIngredients("Toaster \n\n Bread");
         recipe.setInstructions("Toasters toast toast");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(5);
         addStep(recipe);
 
 
@@ -297,15 +294,15 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Stirfry
         food = new Food("Veggie Stir-fry");
-        food.setId(1);
+        food.setId(6);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Veggie Stir-fry");
-            favorites.setFavId(1);
+            favorites.setFavId(6);
             addFavorites(favorites);
 
         }
@@ -319,7 +316,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(6);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -327,15 +324,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(6);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(6);
         addStep(recipe);
 
 
@@ -343,13 +340,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Chocolate Mousse");
-        food.setId(1);
+        food.setId(7);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Chocolate Mousse");
-            favorites.setFavId(1);
+            favorites.setFavId(7);
             addFavorites(favorites);
 
         }
@@ -363,7 +360,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(7);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -371,15 +368,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(7);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(7);
         addStep(recipe);
 
 
@@ -387,13 +384,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Ice Cream");
-        food.setId(1);
+        food.setId(8);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Ice Cream");
-            favorites.setFavId(1);
+            favorites.setFavId(8);
             addFavorites(favorites);
 
         }
@@ -407,7 +404,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(8);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -415,15 +412,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(8);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(8);
         addStep(recipe);
 
 
@@ -431,13 +428,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Chipped Beef");
-        food.setId(1);
+        food.setId(9);
 
 
         if(toggleButtonState = false) {
 
             Favorites favorites = new Favorites("Chipped Beef");
-            favorites.setFavId(1);
+            favorites.setFavId(9);
             addFavorites(favorites);
 
         }
@@ -451,7 +448,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(9);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -459,15 +456,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(9);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(9);
         addStep(recipe);
 
 
@@ -475,13 +472,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Brownies");
-        food.setId(1);
+        food.setId(10);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Brownies");
-            favorites.setFavId(1);
+            favorites.setFavId(10);
             addFavorites(favorites);
 
         }
@@ -495,7 +492,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(10);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -503,15 +500,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(10);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(10);
         addStep(recipe);
 
 
@@ -519,13 +516,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Frìttuli");
-        food.setId(1);
+        food.setId(11);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Frìttuli");
-            favorites.setFavId(1);
+            favorites.setFavId(11);
             addFavorites(favorites);
 
         }
@@ -539,7 +536,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(11);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -547,15 +544,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(11);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(11);
         addStep(recipe);
 
 
@@ -563,13 +560,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Ham");
-        food.setId(1);
+        food.setId(12);
 
 
         if(toggleButtonState = false) {
 
             Favorites favorites = new Favorites("Ham");
-            favorites.setFavId(1);
+            favorites.setFavId(12);
             addFavorites(favorites);
 
         }
@@ -583,7 +580,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(12);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -591,15 +588,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(12);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(12);
         addStep(recipe);
 
 
@@ -607,13 +604,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Grilled Cheese");
-        food.setId(1);
+        food.setId(13);
 
 
         if(toggleButtonState = false) {
 
             Favorites favorites = new Favorites("Grilled Cheese");
-            favorites.setFavId(1);
+            favorites.setFavId(13);
             addFavorites(favorites);
 
         }
@@ -627,7 +624,7 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 1");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(13);
         addStep(recipe);
 
         recipe = new Recipe();
@@ -635,15 +632,15 @@ public class RecipeRepository extends AppCompatActivity {
         recipe.setText("Step 2");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(13);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
+        recipe.setId(3);
         recipe.setText("Step 3");
         recipe.setIngredients("Ingredients here");
         recipe.setInstructions("Insert Instructions");
-        recipe.setSubjectId(1);
+        recipe.setSubjectId(13);
         addStep(recipe);
 
 
@@ -651,13 +648,13 @@ public class RecipeRepository extends AppCompatActivity {
 
         //        Steps for pancakes
         food = new Food("Grilled Chicken");
-        food.setId(1);
+        food.setId(14);
 
         //This has been set to "true" to show that the favorites function itself works.
         if(toggleButtonState = true) {
 
             Favorites favorites = new Favorites("Grilled Chicken");
-            favorites.setFavId(1);
+            favorites.setFavId(14);
             addFavorites(favorites);
 
         }
@@ -668,30 +665,30 @@ public class RecipeRepository extends AppCompatActivity {
         //recipe new recipe creates individual steps
         recipe = new Recipe();
         recipe.setId(1);
-        recipe.setText("Sauce");
-        recipe.setIngredients("4 Roma tomatoes \n\n 1/2 clove of garlic \n\n 1 tablespoon of oregano");
-        recipe.setInstructions("slice the skin of the tomato in a \"X\" pattern \n\n boil them for 1 minute \n\n peel then dice tomato flesh\n\n Sautee with seasonings for 3 minutes ");
-        recipe.setSubjectId(1);
+        recipe.setText("Step 1");
+        recipe.setIngredients("Ingredients here");
+        recipe.setInstructions("Insert Instructions");
+        recipe.setSubjectId(14);
         addStep(recipe);
 
         recipe = new Recipe();
         recipe.setId(2);
-        recipe.setText("Pasta");
-        recipe.setIngredients("2 cups of water\n\nSalt\n\n1/2 - 1 pound dry spaghetti");
-        recipe.setInstructions("pour 2 cups of water into large pot\n\n Throw a pinch of salt into water\n\n Heat water until boil\n\n Place pasta into water, boil for 4 minutes or until Al Dente \n\n Serve and enjoy!");
-        recipe.setSubjectId(1);
+        recipe.setText("Step 2");
+        recipe.setIngredients("Ingredients here");
+        recipe.setInstructions("Insert Instructions");
+        recipe.setSubjectId(14);
         addStep(recipe);
 
         recipe = new Recipe();
-        recipe.setId(2);
-        recipe.setText("Serving");
-        recipe.setIngredients("Quarter Oz tomato sauce\n\nHalf pound spaghetti\n\nSalt & pepper (if desired)");
-        recipe.setInstructions("Place pasta into bowl or place\n\nPour sauce over pasta\n\nAdd salt and pepper if desired");
+        recipe.setId(3);
+        recipe.setText("Step 3");
+        recipe.setIngredients("Ingredients here");
+        recipe.setInstructions("Insert Instructions");
         recipe.setSubjectId(1);
         addStep(recipe);
 
 
-// ///////////////////////////////////////////////////////////////
+ ///////////////////////////////////////////////////////////////
     }
 
 
@@ -710,15 +707,6 @@ public class RecipeRepository extends AppCompatActivity {
         mHashFavList.put(favorites.getFavId(), favoritesList);
     }
 
-//    public Food getRecipe(long subjectId) {
-//        for (Food food : mFoodList) {
-//            if (food.getId() == subjectId) {
-//                return food;
-//            }
-//        }
-//
-//        return null;
-//    }
 
     public List<Food> getInstructions() {
         return mFoodList;
