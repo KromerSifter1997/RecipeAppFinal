@@ -43,7 +43,7 @@ public class FavoriteActivity extends AppCompatActivity {
 
         mSubjectColors = getResources().getIntArray(R.array.subjectColors);
 
-//        findViewById(R.id.add_subject_button).setOnClickListener(view -> addSubjectClick());
+
 
         // Create 2 grid layout columns
         mRecyclerView = findViewById(R.id.Favorite_recycler_view);
@@ -72,23 +72,6 @@ public class FavoriteActivity extends AppCompatActivity {
 
 
 
-
-//    private void addFavorite() {
-////        SubjectDialogFragment dialog = new SubjectDialogFragment();
-////        dialog.show(getSupportFragmentManager(), "subjectDialog");
-//    }
-
-//    private void openFavorite() {
-//        Button btn = (Button)findViewById(R.id.openFavoritesButton);
-//
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(FavoriteActivity.this, FavoriteActivity.class));
-//            }
-//        });
-//
-//    }
 
     private class FavoritesHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {

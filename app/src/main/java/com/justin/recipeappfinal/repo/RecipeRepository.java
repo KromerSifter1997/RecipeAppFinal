@@ -162,7 +162,7 @@ public class RecipeRepository extends AppCompatActivity {
         }
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Sauce");
@@ -198,7 +198,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("batter");
@@ -236,7 +236,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Roux");
@@ -280,7 +280,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Toast");
@@ -293,6 +293,8 @@ public class RecipeRepository extends AppCompatActivity {
 
 
 // ///////////////////////////////////////////////////////////////
+        //The actual content of the recipes wasn't done til near the very end.
+        //I didn't really have the time to find and trim down so many recipes.
 
         //        Steps for Stirfry
         food = new Food("Veggie Stir-fry");
@@ -310,7 +312,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -338,7 +340,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Chocolate Mousse
         food = new Food("Chocolate Mousse");
         food.setId(7);
 
@@ -354,7 +356,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -382,7 +384,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Ice Cream
         food = new Food("Ice Cream");
         food.setId(8);
 
@@ -398,7 +400,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -426,7 +428,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Shit on a Shingle (not kidding that's what its called)
         food = new Food("Chipped Beef");
         food.setId(9);
 
@@ -442,7 +444,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -470,7 +472,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Brownies
         food = new Food("Brownies");
         food.setId(10);
 
@@ -486,7 +488,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -514,7 +516,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Frìttuli (think like a italian pork stew)
         food = new Food("Frìttuli");
         food.setId(11);
 
@@ -530,7 +532,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -558,7 +560,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Ham
         food = new Food("Ham");
         food.setId(12);
 
@@ -574,7 +576,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -602,7 +604,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Grilled Cheese
         food = new Food("Grilled Cheese");
         food.setId(13);
 
@@ -618,7 +620,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");
@@ -646,7 +648,7 @@ public class RecipeRepository extends AppCompatActivity {
 
 // ///////////////////////////////////////////////////////////////
 
-        //        Steps for pancakes
+        //        Steps for Grilled Chicken
         food = new Food("Grilled Chicken");
         food.setId(14);
 
@@ -662,7 +664,7 @@ public class RecipeRepository extends AppCompatActivity {
 
         addRecipe(food);
 
-        //recipe new recipe creates individual steps
+
         recipe = new Recipe();
         recipe.setId(1);
         recipe.setText("Step 1");

@@ -21,6 +21,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         ListView list = (ListView) findViewById(R.id.searchView);
 
+        //Todo: make array list <Recipes> or <Food> after importing/extending it into this class
         ArrayList<String> Recipes = new ArrayList<>();
         //right now its going to just be text, what i want to do is move the private array names into a public array, bring it over here and then load that into it from there.
         Recipes.add("Spaghetti");

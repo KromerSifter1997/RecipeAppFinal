@@ -29,7 +29,7 @@ public class RecipeActivity extends AppCompatActivity
     private int[] mSubjectColors;
     private RecipeListViewModel mRecipeListViewModel;
 
-    boolean toggleButtonState;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +45,9 @@ public class RecipeActivity extends AppCompatActivity
 
         mSubjectColors = getResources().getIntArray(R.array.subjectColors);
 
-//        findViewById(R.id.add_subject_button).setOnClickListener(view -> addSubjectClick());
 
-        // Create 2 grid layout columns
+
+        // Create 2 grid layout columns for the recipe cards
         mRecyclerView = findViewById(R.id.recipe_recycler_view);
         RecyclerView.LayoutManager gridLayoutManager =
                 new GridLayoutManager(getApplicationContext(), 2);
@@ -64,8 +64,7 @@ public class RecipeActivity extends AppCompatActivity
         FloatingActionButton fBtn = (FloatingActionButton) findViewById(R.id.openFavoritesButton);
         fBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //do this to check if changes save when reloading ui
-//                updateUI(mRecipeListViewModel.getRecipes());
+
                 startActivity(new Intent(RecipeActivity.this, FavoriteActivity.class));
             }
 
@@ -75,8 +74,7 @@ public class RecipeActivity extends AppCompatActivity
         FloatingActionButton sBtn = (FloatingActionButton) findViewById(R.id.searchButton);
         sBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //do this to check if changes save when reloading ui
-//                updateUI(mRecipeListViewModel.getRecipes());
+
                 startActivity(new Intent(RecipeActivity.this, SearchActivity.class));
             }
 
@@ -93,25 +91,8 @@ public class RecipeActivity extends AppCompatActivity
 
     }
 
-    //going to reuse this to instead let the player know when a recipe is added to favorites
 
-//    @Override
-//    public void onSubjectEntered(String subjectText) {
-//        if (subjectText.length() > 0) {
-//            Subject subject = new Subject(subjectText);
-//
-//            updateUI(mSubjectListViewModel.getSubjects());
-//
-//
-//        }
-//    }
 
-//        TODO: use this to experiment with adding favorites on the recipe menu instead of within a recipe
-
-    private void addFavorite() {
-//        SubjectDialogFragment dialog = new SubjectDialogFragment();
-//        dialog.show(getSupportFragmentManager(), "subjectDialog");
-    }
 
     private void openFavorite() {
         Button btn = (Button)findViewById(R.id.openFavoritesButton);
