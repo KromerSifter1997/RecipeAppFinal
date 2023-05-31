@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recipe App</string>
+    <string name="RecipeLabel">Step:</string>
+    <string name="IngredientLabel">Ingredients</string>
+    <string name="InstructionLabel">Instructions</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="favorite">☆</string>
+    <string name="cancel">Cancel</string>
+    <string name="favoriteRecipes">Open Favorite</string>
+    <string name="stepNumber">(Step %2$d of %3$d)</string>
+    <string name="cardfavoritebutton">Favoriter button</string>
+    <string name="cardUnfavoriteButton">★</string>
+</resources>

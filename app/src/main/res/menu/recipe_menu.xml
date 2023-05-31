@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <!--ifroom makes it appear on the bar, never always sets in 3 dots-->
+
+    <item android:id="@+id/previous"
+        android:icon="@drawable/previous"
+        android:title="@string/previous"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/next"
+        android:icon="@drawable/next"
+        android:title="@string/next"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/Favoriter"
+        android:title="@string/favorite"
+        app:showAsAction="never"/>
+
+
+</menu>

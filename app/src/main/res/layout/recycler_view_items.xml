@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardUseCompatPadding="true">
+    <!--PUT ANYTHING YOU WANT INSIDE EACH CARD IN HERE-->
+
+    <TextView
+        android:id="@+id/subject_text_view"
+        style="@style/CardLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/cardfavoritebutton"
+        android:textColor="@color/gray_200"
+        android:textOff="@string/favorite"
+        android:textOn="@string/cardUnfavoriteButton"
+        android:textSize="35sp" />
+
+
+</androidx.cardview.widget.CardView>
